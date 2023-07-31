@@ -25,7 +25,7 @@ public class LoginController {
 	
 	@PostMapping("/login")
 	public ResponseEntity<UserDetails> doLogin(@RequestBody UserDetails loginData){
-		log.info("in the controller = "+loginData);
+		log.info("in the login controller = "+loginData);
 		UserDetails validUser = userServices.userExist(loginData);
 		
 		return new ResponseEntity(validUser, HttpStatus.OK);
