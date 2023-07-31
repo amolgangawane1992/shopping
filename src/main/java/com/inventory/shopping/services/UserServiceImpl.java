@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		UserDetails userDetails = userDetailsRepo.findByUserName(loginData.getUserName());
 		
-		log.info("result from db :: "+userDetails);
+		log.info("result from db : "+userDetails);
 		return userDetails;
 	}
 
